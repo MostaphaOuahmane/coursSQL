@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Cours SQL -accueil</title>
+    <link rel="stylesheet" href="css/stayle.css">
+</head>
+
+<body>
+    <!-- ici on mettra un diapora full with (cs.container-fluid) -->
+    <header class="container bg-white">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Cours SQL -accueil!</h1>
+                <p class="lead">.......</p>
+            </div>
+
+        </div>
+
+
+        <!-- fin row -->
+    </header>
+    <div class="row mt-5 mb-5 flex justify-content-center">
+
+        <div class=" col-8">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/php.jpg" class="d-block w-100" alt="pam">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pma.jpg" class="d-block w-100" alt="pma">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/sql.jpg" class="d-block w-100" alt="sql">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <main class="container bg-white mb-4 row mx-auto">
+        <div class="col-4 ">
+            <nav id="navbar-example3" class="navbar navbar-light  flex-column align-items-stretch p-3">
+
+                <nav class="nav nav-pills flex-column hverd">
+                    <a class="nav-link border" href="#Introduction">Introduction</a>
+                    <a class="nav-link  border" href="#modelisation">modélisation</a>
+                    <a class="nav-link border" href="#les-tables">les tables </a>
+                    <a class="nav-link border" href="#les-colonnes">les colonnes ou les champs </a>
+                    <a class="nav-link border" href="#les-types-de-donnees">les types de données</a>
+                    <a class="nav-link border" href="#Pk-Ai-Id">le types de données pk AI pour les ID</a>
+                    <a class="nav-link border" href="#les-cardinalites">les cardinalités </a>
+                    <a class="nav-link border" href="#table">table de jointure </a>
+                    <a class="nav-link border" href="#clefs">clefs étrangéres ou FK</a>
+                    <a class="nav-link border" href="#les-enregistrements"> les enregistrements</a>
+                    <a class="nav-link border" href="#Interroger-la-BDD">Interroger la BDD </a>
+                </nav>
+            </nav>
+        </div>
+        <div class="col-8">
+            <section id="Introduction">
+                <h3>Introduction</h3>
+                <div class="row">
+                    <div class="col-4 ">
+                        <h2>1/ MySQL</h2>
+                        <ul>
+                            <li>MySQL peut s'utlisier en ligne de commande (Shell , Bash , CMDR et la Terminal sur MAC
+                                ou LINUX ou avec une interface graphique comme phpMyadmin </li>
+                            <li> pour ce connecter en ligne de commande on utlise <code>mysql -u utlisateur -p</code>
+                            </li>
+                            <li class="bg-danger text-white">: il faut penser à mettre le nom d'utlisateur spécifique au
+                                serveur ; sur le PC en local l'utilisateur est "root" qui signifie "racine"</li>
+                            <li>En local sur PC , par défaut il n'y a pas de mot passe , sur Mac le mot est 'root'</li>
+                            <li>En ligne chaque BDD aura son utilisateur propre et son mot de passe propre</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h2>2/ SGBDR ou SGBD</h2>
+                    </div>
+                    <div class="col-4">
+                        <h2>3/ En résumé </h2>
+                    </div>
+                </div>
+
+                <!-- fin row -->
+            </section>
+            <section id="modelisation">
+                <h3>modélisation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+
+            </section>
+            <section id="les-tables">
+                <h3>les tables</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="les-colonnes">
+                <h3>les colonnes ou les champs </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="les-types-de-donnees">
+                <h3>les types de données</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="Pk-Ai-Id">
+                <h3>le types de données pk AI pour les ID</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="les-cardinalites">
+                <h3>les cardinalités</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="table">
+                <h3>table de jointure </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="clefs">
+                <h3>clefs étrangéres ou FK</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="les-enregistrements">
+                <h3>les enregistrements</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+            <section id="Interroger-la-BDD">
+                <h3>Interroger la BDD</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
+                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
+                    sapiente mollitia quisquam sequi nihil facilis?
+                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
+                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
+                    Repellat, obcaecati nemo?
+                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
+                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
+                    eveniet nesciunt quibusdam optio iste quam.
+                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
+                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
+                    molestias fugit atque eos vel sapiente odit in?
+                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
+                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
+                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            </section>
+        </div>
+
+    </main>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
