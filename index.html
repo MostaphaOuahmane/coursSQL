@@ -81,92 +81,157 @@
                             </li>
                             <li class="bg-danger text-white">: il faut penser à mettre le nom d'utlisateur spécifique au
                                 serveur ; sur le PC en local l'utilisateur est "root" qui signifie "racine"</li>
+                            <li>pour une premiére installation il est néccessaire d'instaler sur un PC windows les
+                                varaibles de commandes avant d'utliser mysql en ligne comande. cf <a
+                                    href="https://www.malekal.com/variables-environnement-windows/">plus sur les
+                                    varaible d'variables environnements</a></li>
                             <li>En local sur PC , par défaut il n'y a pas de mot passe , sur Mac le mot est 'root'</li>
                             <li>En ligne chaque BDD aura son utilisateur propre et son mot de passe propre</li>
                         </ul>
                     </div>
                     <div class="col-4">
                         <h2>2/ SGBDR ou SGBD</h2>
+                        <ul>
+                            <li>Un <abbr title="un systéme de gestion de bas de données relationnelles">SGBDR
+                                    (SGBD)</abbr> </li>
+                            <li>Un systéme qui permet de gérer une BDD Base de données </li>
+                            <li>CRUD:create , read ,update,delete</li>
+                            <li>Date de naissance 1994</li>
+                            <li> Open Source</li>
+                            <li>Concurrents : oracle , Ms Access ,SQLite,PostgreSQL</li>
+                        </ul>
+                        <hr>
+                        <ul>
+                            <li><abbr title="systéme de gestion de base  de données relationnelles">SGBDR : systéme de
+                                    gestion de base de données relationnelles</abbr></li>
+                            <li><abbr title=" systéme de gestion de base  de données">SGBD est systéme de gestion de
+                                    base de données</abbr></li>
+                            <li><abbr title="Modéle conceptuel de données">MCD Modéle conceptuel de données"</abbr></li>
+                            <li><abbr title="Bas de Données">BDD:Bas de Données</abbr></li>
+                            <li><abbr title="Date Bas">DB est Date Bas</abbr></li>
+                            <li><abbr title="structured Query Language">SQL structured Query Language</abbr></li>
+                        </ul>
                     </div>
                     <div class="col-4">
                         <h2>3/ En résumé </h2>
+                        <ul>
+                            <li> A l'intérieur de BDD les information sont classéer , structurées par sujet </li>
+                            <li> le langage de requéte SQL nous permet d'échanger les information avec la base </li>
+                            <li>dans une BDD les données sont représentées sous forme de "<table></table>
+                            </li>
+                            <li>Dans une table nous avons des colonnes ,chaque donnée sera introduilte sous forme" de
+                                ligne dans la table</li>
+                            <li class="small"> une fois que les information ont été enregistrées , il est important de
+                                les gérer (ajout , modifcation ,suppression, consultation ) </li>
+                        </ul>
                     </div>
+
                 </div>
 
                 <!-- fin row -->
             </section>
-            <section id="modelisation">
+            <section id="modelisation" class="row">
                 <h3>modélisation</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
-
+                <div class="col-12 col-md-6 col-lg-6 bg-warning">
+                    <p> Avant de créer une BDD , il est essentiel de se poser et de réfléchir à la modélisation de la
+                        base : pour éviter de se tromper.</p>
+                    <p>changer la modelisation d'une BDD en cours de projet n'est pas recommandé ; cela nous forcera à
+                        réécrire une bonne partie de code </p>
+                    <h4>comment modéliser une BDD ?</h4>
+                    <p>on peut modéliser une BDD sur une feuille de papier ou on peut utlisier un logeciel pour nous
+                        aider Exemple : <a href="https://www.mysql.com/fr/products/workbench/"></a></p>
+                    <p>Pour une bonne conception deBDD , il faut réflécher en terme de sujet en modélisation ceux du
+                        monde réel , la modélisation de comporte de différentes tables (une table = un sujet ); EX: si
+                        vendons des produits il faut une table des produits et une tables des comandes .</p>
+                </div>
             </section>
-            <section id="les-tables">
+            <section id="les-tables" class="row">
                 <h3>les tables</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
+                <div class="col-12 col-md-12 col-lg-6 bg-danger">
+                    <ul>
+                        <li>1 sujet représente 1 table dans une base de données. </li>
+                        <li>1 table est un emplacement de sauvegarde.</li>
+                        <li>Les données sont stockées à l'intérieur de tables. Une table peut être comparée à une liste,
+                            qui contient des enregistrements relatifs à un sujet bien défini.</li>
+                    </ul>
+                    <p>Il faut réfléchir au sujet et à ses conséquences. Si nous vendons des produits, nous aurons
+                        certainement des membres. 1 table membre sera donc nécessaire. En terme de fonctionnalité, si
+                        nous souhaitons proposer un abonnement newsletter aux membres, nous aurons besoin d'1 table
+                        newsletter repertoriant les membres abonnés <br>
+                        <strong>table = 1 sujet</strong>
+                    </p>
+
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 bg-light">
+
+                    <p>Il faut réfléchir au sujet et à ses conséquences. Si nous vendons des produits, nous aurons
+                        certainement des membres. 1 table membre sera donc nécessaire. En terme de fonctionnalité, si
+                        nous souhaitons proposer un abonnement newsletter aux membres, nous aurons besoin d'1 table
+                        newsletter repertoriant les membres abonnés <br>
+                        <strong>table = 1 sujet</strong>
+                    </p>
+
+                </div>
             </section>
-            <section id="les-colonnes">
+            <section id="les-colonnes" class="row">
                 <h3>les colonnes ou les champs </h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
+                <div class="col-12 col-md-12 col-lg-6 bg-light">
+                    <p>Chaque table possède généralement plusieurs champs (aussi appelés colonnes). Les colonnes /
+                        champs représentent des caractéristiques relatives au sujet (la table).</p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 bg-warning">
+                    <p>Pour savoir, quelle colonne mettre dans quelle table, il faut se poser la question suivante :
+                        qu'est-ce qui pourrait décrire mon sujet ? quelles sont les informations sur mon sujet ? <br>
+                        Par exemple, la table membre aura les champs : pseudo, mot de passe, nom, prenom, adresse,
+                        email, etc.</p>
+                </div>
             </section>
-            <section id="les-types-de-donnees">
+            <section id="les-types-de-donnees" class="row">
                 <h3>les types de données</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
+                <div class="col-12 bg-light">
+    
+                      <table class="table table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th scope="col">Type de champ</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Contexte</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">VARCHAR</th>
+                            <td>Chaîne (jusqu'à 256 caractères)</td>
+                            <td>Pour enregistrer un pseudo, un email, le titre d'un produit ou d'un article de blog</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">TEXT</th>
+                            <td>Chaîne de caractère (illimité)</td>
+                            <td>Pour un contenu textuel long, un article de blog</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">INT</th>
+                            <td>Numérique</td>
+                            <td>Pour un identifiant, un prix, un code un code postal le nombre de produits en stocks etc.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">DATE</th>
+                            <td>Date</td>
+                            <td>Pour la date d'un enregistrement (une inscription), la date d'une commande etc.</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">ENUM</th>
+                            <td>Une liste (une énumération)</td>
+                            <td>Pour proposer une liste de termes ex. : "Madame", "Monsieur"</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+              
+                  </div>
+                  <!-- fin row -->
+                    
+                </div>
             </section>
             <section id="Pk-Ai-Id">
                 <h3>le types de données pk AI pour les ID</h3>
