@@ -61,7 +61,7 @@
                     <a class="nav-link border" href="#les-types-de-donnees">les types de données</a>
                     <a class="nav-link border" href="#Pk-Ai-Id">le types de données pk AI pour les ID</a>
                     <a class="nav-link border" href="#les-cardinalites">les cardinalités </a>
-                    <a class="nav-link border" href="#table">table de jointure </a>
+                    <a class="nav-link border" href="#jointure">table de jointure </a>
                     <a class="nav-link border" href="#clefs">clefs étrangéres ou FK</a>
                     <a class="nav-link border" href="#les-enregistrements"> les enregistrements</a>
                     <a class="nav-link border" href="#Interroger-la-BDD">Interroger la BDD </a>
@@ -70,7 +70,7 @@
         </div>
         <div class="col-8">
             <section id="Introduction">
-                <h3>Introduction</h3>
+                <h3 class="mb-5 mt-5" style="background: orange;">Introduction</h3>
                 <div class="row">
                     <div class="col-4 ">
                         <h2>1/ MySQL</h2>
@@ -131,7 +131,7 @@
                 <!-- fin row -->
             </section>
             <section id="modelisation" class="row">
-                <h3>modélisation</h3>
+                <h3 class="mb-5 mt-5" style="background: orange;">modélisation</h3>
                 <div class="col-12 col-md-6 col-lg-6 bg-warning">
                     <p> Avant de créer une BDD , il est essentiel de se poser et de réfléchir à la modélisation de la
                         base : pour éviter de se tromper.</p>
@@ -146,7 +146,7 @@
                 </div>
             </section>
             <section id="les-tables" class="row">
-                <h3>les tables</h3>
+                <h3 class="mb-5 mt-5" style="background: orange;">les tables</h3>
                 <div class="col-12 col-md-12 col-lg-6 bg-danger">
                     <ul>
                         <li>1 sujet représente 1 table dans une base de données. </li>
@@ -174,7 +174,7 @@
                 </div>
             </section>
             <section id="les-colonnes" class="row">
-                <h3>les colonnes ou les champs </h3>
+                <h3 class="mb-5 mt-5 " style="background: orange;">les colonnes ou les champs </h3>
                 <div class="col-12 col-md-12 col-lg-6 bg-light">
                     <p>Chaque table possède généralement plusieurs champs (aussi appelés colonnes). Les colonnes /
                         champs représentent des caractéristiques relatives au sujet (la table).</p>
@@ -187,162 +187,202 @@
                 </div>
             </section>
             <section id="les-types-de-donnees" class="row">
-                <h3>les types de données</h3>
+                <h3 class="mb-5 mt-5" style="background: orange;">les types de données</h3>
                 <div class="col-12 bg-light">
-    
-                      <table class="table table-striped table-sm">
+
+                    <table class="table table-striped table-sm">
                         <thead>
-                          <tr>
-                            <th scope="col">Type de champ</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Contexte</th>
-                          </tr>
+                            <tr>
+                                <th scope="col">Type de champ</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Contexte</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">VARCHAR</th>
-                            <td>Chaîne (jusqu'à 256 caractères)</td>
-                            <td>Pour enregistrer un pseudo, un email, le titre d'un produit ou d'un article de blog</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">TEXT</th>
-                            <td>Chaîne de caractère (illimité)</td>
-                            <td>Pour un contenu textuel long, un article de blog</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">INT</th>
-                            <td>Numérique</td>
-                            <td>Pour un identifiant, un prix, un code un code postal le nombre de produits en stocks etc.</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">DATE</th>
-                            <td>Date</td>
-                            <td>Pour la date d'un enregistrement (une inscription), la date d'une commande etc.</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">ENUM</th>
-                            <td>Une liste (une énumération)</td>
-                            <td>Pour proposer une liste de termes ex. : "Madame", "Monsieur"</td>
-                          </tr>
+                            <tr>
+                                <th scope="row">VARCHAR</th>
+                                <td>Chaîne (jusqu'à 256 caractères)</td>
+                                <td>Pour enregistrer un pseudo, un email, le titre d'un produit ou d'un article de blog
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">TEXT</th>
+                                <td>Chaîne de caractère (illimité)</td>
+                                <td>Pour un contenu textuel long, un article de blog</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">INT</th>
+                                <td>Numérique</td>
+                                <td>Pour un identifiant, un prix, un code un code postal le nombre de produits en stocks
+                                    etc.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">DATE</th>
+                                <td>Date</td>
+                                <td>Pour la date d'un enregistrement (une inscription), la date d'une commande etc.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ENUM</th>
+                                <td>Une liste (une énumération)</td>
+                                <td>Pour proposer une liste de termes ex. : "Madame", "Monsieur"</td>
+                            </tr>
                         </tbody>
-                      </table>
-                    </div>
-              
-                  </div>
-                  <!-- fin row -->
-                    
+                    </table>
+                </div>
+
+
+                <!-- fin row -->
+
+
+            </section>
+            <section id="Pk-Ai-Id" class="row">
+                <h3 class="mb-5 mt-5" style="background: orange;">le types de données pk AI pour les ID</h3>
+                <div class="col-12 col-md-12 col-lg-6 bg-light">
+                    <h4>A / PK - Primary Key , clef primaire</h4>
+                    <ul>
+                        <li>les identifaints sont des champs un peu particuliers car ils ne décrivent pas le sujet , ce
+                            sont
+                            des champs systématiquement présent dans chaque table et ce en 1ére position </li>
+                        <li> les identifiants sont uniques</li>
+                        <li> chaque table posséde un champs identifiant , nous appelons cela une clef primaire(pk)</li>
+                        <li>Par ex . nous pourons appeler le champs "id" < ou encore "id_membre" "id_user" Pour la table
+                                ou "user" </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 bg-warning">
+                    <h4>B / AI - Auto Increment, auto incrémenté </h4>
+                    <ul>
+                        <li> auto incrémenté est une option de générer un numéro unique dans une champs de type clé
+                            primaire(identifiant) </li>
+                        <li>Par conséquent , retenez bien que le 1er champ table sera systématiquement un "id" qui sera
+                            PK
+                            et AI</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 bg-danger">
+                    <h4>C/ AI - NULL ,NOT NULL </h4>
+                    <ul>
+                        <li>Dans chaque champs , nous ourrons indique si nous acceptons les valeurs NULL ou NOT NULL
+                        </li>
+                        <li>NULL est un type de valeur en informatique évitant de laisser un champs vide si nous n'avons
+                            pas
+                            information à y déposer</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 bg-light">
+
+                    <h4>D / Les relation</h4>
+                    <ul>
+                        <li>Il arrive parfois que les sujets interagissent entre eux</li>
+                        <li>Exemple : 1 membre commande 1 produit (ou 1 produit est commandé par 1 membre), nous devrons
+                            enregistrer l'information dans 1 table commande.</li>
+                        <li>Autre exemple : 1 conducteur conduit 1 véhicule (ou 1 véhicule est conduit par 1
+                            conducteur). il nous faudra une table permettant de préciser quel conducteur va avec quel
+                            véhicule.</li>
+                    </ul>
+
+
                 </div>
             </section>
-            <section id="Pk-Ai-Id">
-                <h3>le types de données pk AI pour les ID</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            <section id="les-cardinalites" class="row">
+                <h3 class="mb-5 mt-5" style="background: orange;">les cardinalités</h3>
+                <div class="col-md-6">
+                    <ul>
+                        <li>les cardinalités permettent de connaitre le chiffre minimum et maximum d'enregistrement pour
+                            une relation</li>
+                        <li>ex 1: un homme est le fils d'une femme et d'une seule (minimum = 1 et max =1) <br>
+                            en revanche une femme peut n'avoir aucun enfant ou plusieurs (min = 0 et max = n)(n = nombre
+                            entier naturel)</li>
+                        <li> Exemple 2 : 1 livre possède forcément 1 auteur et qu'1 seul. Relation (1,1). Minimum 1
+                            auteur, Maximum 1 auteur</li>
+                        <li>1 auteur peut avoir écrit plusieurs livre (ou aucun). Relation (0,n). Minimum 0 livre,
+                            Maximum N livres</li>
+                        <li>Dans cet exemple une table auteurs et une table livres suffisent : nous n'avons pas besoin
+                            de table de jointure</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <figure>
+                        <img src="img/cardinalites.jpg" alt="les cardinalités ">
+                        <figcaption class="bg-light">les cardinalités </figcaption>
+                    </figure>
+                </div>
             </section>
-            <section id="les-cardinalites">
-                <h3>les cardinalités</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
+            <section id="jointure" class="row">
+                <h3 class="mb-5 mt-5" style="background: orange;">table de jointure </h3>
+                <div class="col-md-6 col-lg-6">
+                    <p>une table de jointure permet de faire le lien entre 2 tables</p>
+                    <p>Exemple une société de taxi, qui possède des conducteurs et des véhicules.</p>
+                    <ul>
+                        <li>1 conducteur peut conduire 0 ou plusieurs véhicules.</li>
+                        <li>1 véhicule peut être conduit par 0 ou plusieurs conducteurs</li>
+                        <p>comment savoir quel conducteur conduit quel véhicule? ou dans l'autre sens quel véhicule est
+                            conduit par quel conducteur?</p>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <figure>
+                        <img src="img/jointures.jpg" class="img-fluid" alt="jointure">
+                        <figcaption class="bg-light">jointure</figcaption>
+                    </figure>
+                </div>
             </section>
-            <section id="table">
-                <h3>table de jointure </h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
-            </section>
-            <section id="clefs">
-                <h3>clefs étrangéres ou FK</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
-            </section>
-            <section id="les-enregistrements">
-                <h3>les enregistrements</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
-            </section>
-            <section id="Interroger-la-BDD">
-                <h3>Interroger la BDD</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati recusandae inventore,
-                    laboriosam ea non nesciunt id numquam repudiandae, eveniet earum, facere sint est ut
-                    sapiente mollitia quisquam sequi nihil facilis?
-                    Voluptate cum earum ullam eum est aliquid iure quia aliquam quod similique sed veritatis
-                    nihil assumenda sit rerum nisi fugit tenetur magnam, debitis non vel repudiandae qui.
-                    Repellat, obcaecati nemo?
-                    Tempore omnis fugiat dignissimos quidem magni veritatis aperiam aut expedita blanditiis vel
-                    quisquam laborum eos quibusdam sequi ad eaque cupiditate, ducimus pariatur earum! Iure
-                    eveniet nesciunt quibusdam optio iste quam.
-                    Similique, ab. Tempore libero ab reiciendis officia ut, temporibus exercitationem iste,
-                    placeat ea laboriosam ipsum, nulla excepturi accusamus laudantium! Non voluptates incidunt
-                    molestias fugit atque eos vel sapiente odit in?
-                    Rem autem officia blanditiis iure voluptates itaque aliquid officiis quibusdam quam,
-                    aspernatur sit voluptate quo ex eaque adipisci provident, nobis corporis a fuga dignissimos
-                    sunt expedita! Minima nemo eveniet consectetur!</p>
-            </section>
-        </div>
+            <section id="clefs " class="row">
+                <h3 class="mb-5 mt-5 " style="background: orange;">clefs étrangéres ou FK</h3>
+                <div class="col-md-6 col-lg-6">
+                    <p>Les clefs étrangères sont des champs forcément clfs primaires dans leur table d'origine et qui se
+                        retrouvent dans une table extérieure.</p>
+                    <p>Un champ clef étrangère permet de faire la relation avec un autre sujet</p>
 
+                    <figure>
+                        <img src="img/clef_etrangere_2.jpg" alt="">
+                        <figcaption class="bg-light">table de jointure et les clefs étrangères</figcaption>
+                    </figure>
+                </div>
+                <!-- fin col  -->
+                <div class="col-md-6 col-lg-6">
+                    <figure>
+                        <img src="img/clef_etrangere_1.jpg" alt="">
+                        <figcaption class="bg-light">les tables d'origine des clefs étrangères</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="les-enregistrements" class="row">
+                <h3 class="mb-5 mt-5" style="background: orange;">les enregistrements</h3>
+                <div class="col-md-8">
+                    <p class="bg-drange"> chaque enregistrement représent 1 ligne dans la table de la BDD .chaque nouvel
+                        enregistrement va s'auto incrémenté .Méme si un ID est supprimé , il ne sera pas réutilisé !
+                    </p>
+                </div>
+            </section>
+            <section id="Interroger-la-BDD" class="row">
+                <h3 class="mb-5 mt-5" style="background: orange;"> Comment interroger la BDD</h3>
+                <div class="col-md-4">
+                    <h4>a/ Les requêtes</h4>
+                    <p>Une requête permet de poser une question afin d'obtenir une réponse, ou encore de donner un
+                        ordre.</p>
+                    <p>Nokus terminerons toutes nos requêtes SQL par un point virgule ";" pour que MySQL sache que nous
+                        avons terminé d'écrire et qu'il doit exécuter notre demande.</p>
+                    <p>De manière standard les requêtes SQL seront écrite en majuscule
+                        <code>SELECT * FROM membre;</code></p>
+                </div>
+                <!-- fin col -->
+                <div class="col-md-8">
+                    <h4>b/ type de requête </h4>
+                    <p>il exister 4 types de requêtes :</p>
+                    <ul>
+                        <li>Sélection <code>SELECT</code> ; requête question/réponse, nous demandons et obtenons une réponse</li>
+                        <li>Insertion <code>INSERT</code> ; requête d'action, qui aura impact sur les données</li>
+                        <li>Modification <code>UPDATE</code> ; requête d'action, qui aura un impact sur les données</li>
+                        <li>Supression <code>DELETE</code> ; requête d'action, qui aura un impact sur les données</li>
+                    </ul>
+                </div>
+                <!-- fin col  -->
+
+            </section>
+
+        </div>
     </main>
 
 
