@@ -1,132 +1,373 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-    <title>Cours SQL -requetes </title>
-    <link rel="stylesheet" href="css/stayle.css">
-</head>
+    <title>Cours SQL -requetes</title>
+    <link rel="stylesheet" href="css/stayle.css" />
+  </head>
 
-<body>
+  <body>
     <!-- ici on mettra un diapora full with (cs.container-fluid) -->
     <header class="container bg-white">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1>Cours SQL -requetes - page-1</h1>
-                <p class="lead">.......</p>
-            </div>
-
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Cours SQL -requetes - page-1</h1>
+          <p class="lead">.......</p>
         </div>
-        <!-- fin row -->
+      </div>
+      <!-- fin row -->
     </header>
     <!-- fin header -->
 
     <main class="container w-75 mx-auto bg-light mt-5 mb-5">
-        <div class="row">
-            <div class="col-12">
-                <h2> 1- base de BDD <code> CREATE DATABASE (le nom de laBDD) CHARACTER SET'utf8';</code></h2>
-                <ul>
-                    <li>Créer une BDD : <code> CREATE DATABASE (le nom de laBDD) CHARACTER SET'utf8';</code></li>
-                    <li>Utiliser une BDD:<code>USE nom de la BDD;</code></li>
-                    <li> supprimer une BDD : <code>BROP DATABASE IF EXISTS nom de LaBDD</code></li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            1- base de BDD
+            <code> CREATE DATABASE (le nom de laBDD) CHARACTER SET'utf8';</code>
+          </h2>
+          <ul>
+            <li>
+              Créer une BDD :
+              <code>
+                CREATE DATABASE (le nom de laBDD) CHARACTER SET'utf8';</code
+              >
+            </li>
+            <li>Utiliser une BDD:<code>USE nom de la BDD;</code></li>
+            <li>
+              supprimer une BDD :
+              <code>BROP DATABASE IF EXISTS nom de LaBDD</code>
+            </li>
+          </ul>
         </div>
-        <div class="row">
-            <h2> 2- Création d'une table</h2>
-            <p>Création de table employer dans le BDD entrprise</p>
-            <code>
-                    CREATE TABLE IF NOT EXISTS employes (<br>
-                        id_employes int(3) NOT NULL AUTO_INCREMENT, <br>
-                        prenom varchar(20) DEFAULT NULL, <br>
-                        nom varchar(20) DEFAULT NULL, <br>
-                        sexe enum ('f', 'm') NOT NULL, <br>
-                        service varchar(30) DEFAULT NULL, <br>
-                        date_embauche date DEFAULT NULL, <br>
-                        salaire float DEFAULT NULL, <br>
-                        PRIMARY KEY (id_employes)  <br>
-                        )ENGINE=InnoDB DEFAULT CHARSET=latin1 ; 
-                </code>
-            <p>Nous Venons d'ajouter une table "employes" ; nous allons ajouter les contenus dans cette table.</p>
-            <code>INSERT INTO employes (id_employes, prenom, nom, sexe, service, date_embauche, salaire) VALUES<br>
-                  (350, 'Jean-pierre', 'Laborde', 'm', 'direction', '1999-12-09', 5000),<br>
-                  (388, 'Clement', 'Gallet', 'm', 'commercial', '2000-01-15', 2300),<br>
-                  (415, 'Thomas', 'Winter', 'm', 'commercial', '2000-05-03', 3550),<br>
-                  (417, 'Chloe', 'Dubar', 'f', 'production', '2001-09-05', 1900),<br>
-                  (491, 'Elodie', 'Fellier', 'f', 'secretariat', '2002-02-22', 1600),<br>
-                  (509, 'Fabrice', 'Grand', 'm', 'comptabilite', '2003-02-20', 1900),<br>
-                  (547, 'Melanie', 'Collier', 'f', 'commercial', '2004-09-08', 3100),<br>
-                  (592, 'Laura', 'Blanchet', 'f', 'direction', '2005-06-09', 4500),<br>
-                  (627, 'Guillaume', 'Miller', 'm', 'commercial', '2006-07-02', 1900),<br>
-                  (655, 'Celine', 'Perrin', 'f', 'commercial', '2006-09-10', 2700),<br>
-                  (699, 'Julien', 'Cottet', 'm', 'secretariat', '2007-01-18', 1390),<br>
-                  (701, 'Mathieu', 'Vignal', 'm', 'informatique', '2008-12-03', 2000),<br>
-                  (739, 'Thierry', 'Desprez', 'm', 'secretariat', '2009-11-17', 1500),<br>
-                  (780, 'Amandine', 'Thoyer', 'f', 'communication', '2010-01-23', 1500),<br>
-                  (802, 'Damien', 'Durand', 'm', 'informatique', '2010-07-05', 2250),<br>
-                  (854, 'Daniel', 'Chevel', 'm', 'informatique', '2011-09-28', 1700),<br>
-                  (876, 'Nathalie', 'Martin', 'f', 'juridique', '2012-01-12', 3200),<br>
-                  (900, 'Benoit', 'Lagarde', 'm', 'production', '2013-01-03', 2550),<br>
-                  (933, 'Emilie', 'Sennard', 'f', 'commercial', '2014-09-11', 1800),<br>
-                  (990, 'Stephanie', 'Lafaye', 'f', 'assistant', '2015-06-02', 1775);</code>
+      </div>
+      <div class="row">
+        <h2>2- Création d'une table</h2>
+        <p>Création de table employer dans le BDD entrprise</p>
+        <code>
+          CREATE TABLE IF NOT EXISTS employes (<br />
+          id_employes int(3) NOT NULL AUTO_INCREMENT, <br />
+          prenom varchar(20) DEFAULT NULL, <br />
+          nom varchar(20) DEFAULT NULL, <br />
+          sexe enum ('f', 'm') NOT NULL, <br />
+          service varchar(30) DEFAULT NULL, <br />
+          date_embauche date DEFAULT NULL, <br />
+          salaire float DEFAULT NULL, <br />
+          PRIMARY KEY (id_employes) <br />
+          )ENGINE=InnoDB DEFAULT CHARSET=latin1 ;
+        </code>
+        <p>
+          Nous Venons d'ajouter une table "employes" ; nous allons ajouter les
+          contenus dans cette table.
+        </p>
+        <code
+          >INSERT INTO employes (id_employes, prenom, nom, sexe, service,
+          date_embauche, salaire) VALUES<br />
+          (350, 'Jean-pierre', 'Laborde', 'm', 'direction', '1999-12-09',
+          5000),<br />
+          (388, 'Clement', 'Gallet', 'm', 'commercial', '2000-01-15', 2300),<br />
+          (415, 'Thomas', 'Winter', 'm', 'commercial', '2000-05-03', 3550),<br />
+          (417, 'Chloe', 'Dubar', 'f', 'production', '2001-09-05', 1900),<br />
+          (491, 'Elodie', 'Fellier', 'f', 'secretariat', '2002-02-22', 1600),<br />
+          (509, 'Fabrice', 'Grand', 'm', 'comptabilite', '2003-02-20', 1900),<br />
+          (547, 'Melanie', 'Collier', 'f', 'commercial', '2004-09-08', 3100),<br />
+          (592, 'Laura', 'Blanchet', 'f', 'direction', '2005-06-09', 4500),<br />
+          (627, 'Guillaume', 'Miller', 'm', 'commercial', '2006-07-02',
+          1900),<br />
+          (655, 'Celine', 'Perrin', 'f', 'commercial', '2006-09-10', 2700),<br />
+          (699, 'Julien', 'Cottet', 'm', 'secretariat', '2007-01-18', 1390),<br />
+          (701, 'Mathieu', 'Vignal', 'm', 'informatique', '2008-12-03',
+          2000),<br />
+          (739, 'Thierry', 'Desprez', 'm', 'secretariat', '2009-11-17',
+          1500),<br />
+          (780, 'Amandine', 'Thoyer', 'f', 'communication', '2010-01-23',
+          1500),<br />
+          (802, 'Damien', 'Durand', 'm', 'informatique', '2010-07-05', 2250),<br />
+          (854, 'Daniel', 'Chevel', 'm', 'informatique', '2011-09-28', 1700),<br />
+          (876, 'Nathalie', 'Martin', 'f', 'juridique', '2012-01-12', 3200),<br />
+          (900, 'Benoit', 'Lagarde', 'm', 'production', '2013-01-03', 2550),<br />
+          (933, 'Emilie', 'Sennard', 'f', 'commercial', '2014-09-11', 1800),<br />
+          (990, 'Stephanie', 'Lafaye', 'f', 'assistant', '2015-06-02',
+          1775);</code
+        >
+      </div>
+      <div class="row">
+        <h3>3- SELECT et DISTINCT</h3>
+        <div class="col-md-6">
+          <ul>
+            <li>
+              Pour voir un contenu d'uen table
+              <code>SELECT*FORM employes;</code>
+            </li>
+            <li>
+              sélection les prénoms et les noms employes
+              <code> SELECT prenom, nom FROM employes</code>
+            </li>
+            <li>
+              afficheer les données sans les doublons le mot clefs DISTINCT
+              <code>SELECT DISTINCT (service);</code>
+            </li>
+          </ul>
         </div>
-        <div class="row">
-            <h3> 3- SELECT et DISTINCT</h3>
-            <div class="col-md-6">
-                <ul>
-                    <li>Pour voir un contenu d'uen table <code>SELECT*FORM employes;</code></li>
-                    <li>sélection les prénoms et les noms employes <code> SELECT prenom, nom FROM employes</code></li>
-                    <li>afficheer les données sans les doublons le mot clefs DISTINCT
-                        <code>SELECT DISTINCT (service);</code></li>
-                </ul>
-            </div>
-            <div class="col-md-6 bg-danger">
-                <p class="alert alert-danger">
-                    les requêtes ne sont pas sensibles à la casse mais une convention indique qu'il faut mettre les
-                    mots-clefs des requêtes en majuscules.C'est plus facile ainsi que de s'y retrouve.
-                </p>
+        <div class="col-md-6 bg-danger">
+          <p class="alert alert-danger">
+            les requêtes ne sont pas sensibles à la casse mais une convention
+            indique qu'il faut mettre les mots-clefs des requêtes en
+            majuscules.C'est plus facile ainsi que de s'y retrouve.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <h3>4-Les conditions</h3>
+        <div class="col-md-4 alert alert-primary">
+          <h5>A/ les mot-clef WHERE</h5>
+          <ul>
+            <li>
+              Nous cherchons une condition EX :les prénoms et les noms des
+              émployes du service informatique
+              <code
+                >> SELECT prenom, nom, service FROM employes WHERE
+                service='informatique';</code
+              >
+            </li>
+            <li>
+              Nous allons chercheons les employes du sexe masculin
+              <code>SELECT prenom,nom FROM employes WHERE sexe ='m';</code>
+            </li>
+            <li>
+              Trouver la perssonne qui gagne 1390$ :
+              <code
+                >SELECT prenom, nom, service FROM employes WHERE
+                salaire='1390';</code
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 alert alert-success">
+          <h5>B/le mot-clef BETWEEN</h5>
+          <ul>
+            <li>
+              Nous cherchons avec un condition une partie des données ex: les
+              employes embauchés entre 2006-2010<code>
+                SELECT nom, prenom, date_embauche FROM employes WHERE
+                date_embauche BETWEEN '2006-01-01' AND '2010-12-31';</code
+              >
+            </li>
+            <li>
+              Dans une BDD les dates sont toujours notées au format états-uniens
+              <code>YYYY-MM-DD</code>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 alert alert-warning">
+          <h5>C/ Le mot-clef LIKE</h5>
 
-            </div>
+          <p>
+            Le mot-clef LIKE permet de faire une recherche d'une chaîne de
+            caractères dans un champ.
+          </p>
+          <ul>
+            <li>
+              Afficher les employés dont le prénom commence par S :
+              <code
+                >SELECT prenom, nom FROM employes WHERE prenom LIKE 's%';</code
+              >
+            </li>
+            <li>
+              Afficher les émployés qui ont été embauché en 2000<code
+                >SELECT * FROM employes WHERE date_embauche LIKE '%2000%';</code
+              >
+            </li>
+          </ul>
+          <p>
+            Avec la présence du pourcentage avant et après le caractère
+            recherché (ou les caractères recherchés), nous demandons au système
+            de trouver des enregistrements contenant l'expression recherchée.
+          </p>
         </div>
         <div class="row">
-            <h3> 4-Les conditions</h3>
-            <div class="col-md-4 alert alert-primary">
-                <h5>A/ les mot-clef WHERE</h5>
-                <ul>
-                    <li>Nous cherchons une condition EX :les prénoms et les noms des émployes du service informatique 
-                        <code>> SELECT prenom, nom, service FROM employes WHERE service='informatique';</code> </li>
-                    <li> Nous allons chercheons les employes du sexe masculin <code>SELECT prenom,nom FROM employes WHERE sexe ='m';</code></li>
-                    <li> Trouver la perssonne qui gagne 1390$ : <code>SELECT prenom, nom, service FROM employes WHERE salaire='1390';</code></li>
-                </ul>
-            </div>
-            <div class="col-md-4 alert alert-success">
-                <h5>B/le mot-clef BETWEEN</h5>
-                <ul>
-                    <li> Nous cherchons avec un condition une partie des données ex: les employes embauchés entre 2006-2010<code> SELECT nom, prenom, date_embauche FROM employes WHERE date_embauche BETWEEN '2006-01-01' AND '2010-12-31';</code></li>
-                    <li>Dans une BDD les dates sont toujours notées au format états-uniens <code>YYYY-MM-DD</code></li>
-                </ul>
-            </div>
-            <div class="col-md-4 alert alert-warning">
-                <h5>C/ Le mot-clef LIKE</h5>
-            </div>
+          <h2>4- les conditions</h2>
+          <div class="col-md-4">
+            <h3>a/ le mot-clef WHERE</h3>
+            <ul>
+              <li>
+                Nous cherchons une condition ex. les prénoms et les noms des
+                employés du service informatique :<code
+                  >SELECT prenom, nom FROM employes WHERE
+                  service='informatique';</code
+                >
+              </li>
+              <li>
+                Nous cherchons le prénom et le nom des employés du sexe masculin
+                : <code>SELECT prenom, nom FROM employes WHERE sexe='m';</code>
+              </li>
+              <li>
+                Trouver la personne qui gagne 1390 € :
+                <code
+                  >SELECT prenom, nom, service FROM employes WHERE
+                  salaire='1390';</code
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- fin col -->
+          <div class="col-md-4">
+            <h3>b/ le mot-clef BETWEEN</h3>
+            <ul>
+              <li>
+                Nous cherchons avec une condition une partie des données ex :
+                les employés embauchés entre 2006 et 2010
+                <code
+                  >SELECT nom, prenom, date_embauche FROM employes WHERE
+                  date_embauche BETWEEN '2006-01-01' AND '2010-12-31';</code
+                >
+              </li>
+              <li>
+                Dans une BDD les dates sont toujours notées au format
+                états-uniens <code>YYYY-MM-DD</code>
+              </li>
+            </ul>
+          </div>
+          <!-- fin col -->
+
+          <div class="col-md-4">
+            <h3>c/ le mot-clef LIKE</h3>
+            <p>
+              Le mot-clef LIKE permet de faire une recherche d'une chaîne de
+              caractères dans un champ.
+            </p>
+            <ul>
+              <li>
+                Afficher les employés dont le prénom commence par S :
+                <code
+                  >SELECT prenom, nom FROM employes WHERE prenom LIKE
+                  's%';</code
+                >
+              </li>
+              <li>
+                Afficher les émployés qui ont été embauché en 2000<code
+                  >SELECT * FROM employes WHERE date_embauche LIKE
+                  '%2000%';</code
+                >
+              </li>
+            </ul>
+            <p>
+              Avec la présence du pourcentage avant et après le caractère
+              recherché (ou les caractères recherchés), nous demandons au
+              système de trouver des enregistrements contenant l'expression
+              recherchée.
+            </p>
+          </div>
+          <!-- fin col -->
+
+          <div class="col-md-4">
+            <h3>d/ CURDATE()</h3>
+            <ul>
+              <li>
+                UNe requête qui donne la date du jour
+                <code>SELECT CURDATE();</code>
+              </li>
+              <li>
+                Les embauchés entre 2010 et aujourd'hui
+                <code
+                  >SELECT * FROM employes WHERE date_embauche BETWEEN
+                  '2010-01-01' AND CURDATE();</code
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- fin col -->
+
+          <div class="col-md-4">
+            <h3>e/ IN() avec plusieurs valeurs</h3>
+            <ul>
+              <li>
+                Trouver les employés de la comptabilité et du service
+                informatique :
+                <code
+                  >SELECT prenom, nom, service FROM employes WHERE service
+                  IN('informatique', 'comptabilite');</code
+                >
+              </li>
+              <li>
+                = (égal) permet d'annoncer une seule valeur tandis que IN permet
+                d'annoncer plusieurs valeurs
+              </li>
+              <li>
+                trouver les personnes qui ne sont pas au service comptabiité et
+                informatique :
+                <code
+                  >SELECT prenom, nom, service FROM employes WHERE service NOT
+                  IN('informatique', 'comptabilite');</code
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- fin col -->
         </div>
+        <!-- fin row -->
+        <div class="row">
+          <div class="col-md-6">
+            <h2>les Opérateur de Comparaisons</h2>
+            <table
+              class="table table-striped table-hover"
+              id="tableComparaisons"
+            >
+              <thead>
+                <tr>
+                  <th scope="col">Opérateur</th>
+                  <th scope="col">Symbole</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">=</th>
+                  <td>Est égal à</td>
+                </tr>
+                <tr>
+                  <th scope="row">&gt;</th>
+                  <td>Strictement supérieur à</td>
+                </tr>
+                <tr>
+                  <th scope="row">&lt;</th>
+                  <td>Strictement inférieur à</td>
+                </tr>
+                <tr>
+                  <th scope="row">&gt;=</th>
+                  <td>Supérieur ou égal à</td>
+                </tr>
+                <tr>
+                  <th scope="row">&lt;=</th>
+                  <td>Inférieur ou égal à</td>
+                </tr>
+                <tr>
+                  <th scope="row">&lt; &gt; ou !=</th>
+                  <td>est différent de</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+      </div>
     </main>
 
-
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
