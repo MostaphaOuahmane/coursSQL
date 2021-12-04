@@ -1,0 +1,23 @@
+body {
+  background: rgb(251, 255, 0);
+}
+.hverd {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background: rgb(172, 154, 154);
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+.hverd a {
+  color: orange;
+}
+.hverd a:hover {
+  background-color: orange;
+  border: 1px solid black;
+  border-radius: 5px 2px;
+  color: black;
+  font-size: 1rem;
+
+  width: 100%;
+
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
